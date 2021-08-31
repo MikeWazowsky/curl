@@ -146,5 +146,6 @@ artifacts:
     name: curl
   - path: '**/*curl*.dll'
     name: libcurl
-  - path: '**/builds/*'
+  - path: 'builds'
     name: builds
+    type: zip
