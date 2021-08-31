@@ -107,7 +107,7 @@ build_script:
         call buildconf.bat &&
         cd winbuild &&
         call "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x86 &&
-        call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64 &&
+        call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86 &&
         nmake /f Makefile.vc mode=dll VC=14 "SSL_PATH=C:\OpenSSL-v111-Win32" WITH_SSL=dll MACHINE=x86 DEBUG=%DEBUG% ENABLE_UNICODE=%ENABLE_UNICODE% &&
         ..\builds\libcurl-vc14-x86-%PATHPART%-dll-ssl-dll-ipv6-sspi\bin\curl.exe -V
       ) else (
